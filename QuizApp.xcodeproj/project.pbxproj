@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D38E4EE250243D10033AA2F /* questinoData.jason.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D38E4ED250243D10033AA2F /* questinoData.jason.json */; };
 		2D3C8D2C24FBD5F10013F427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D2B24FBD5F10013F427 /* AppDelegate.swift */; };
 		2D3C8D2E24FBD5F10013F427 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D2D24FBD5F10013F427 /* SceneDelegate.swift */; };
 		2D3C8D3024FBD5F10013F427 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D2F24FBD5F10013F427 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D38E4ED250243D10033AA2F /* questinoData.jason.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questinoData.jason.json; sourceTree = SOURCE_ROOT; };
 		2D3C8D2824FBD5F10013F427 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C8D2B24FBD5F10013F427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D3C8D2D24FBD5F10013F427 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				2D3C8D3624FBD5FB0013F427 /* LaunchScreen.storyboard */,
 				2D3C8D3924FBD5FB0013F427 /* Info.plist */,
 				2D3C8D3F24FBDC490013F427 /* Question.swift */,
+				2D38E4ED250243D10033AA2F /* questinoData.jason.json */,
 				2D3C8D4124FBDD220013F427 /* QuizModel.swift */,
 			);
 			path = QuizApp;
@@ -133,6 +136,7 @@
 			files = (
 				2D3C8D3824FBD5FB0013F427 /* LaunchScreen.storyboard in Resources */,
 				2D3C8D3524FBD5FB0013F427 /* Assets.xcassets in Resources */,
+				2D38E4EE250243D10033AA2F /* questinoData.jason.json in Resources */,
 				2D3C8D3324FBD5F10013F427 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
