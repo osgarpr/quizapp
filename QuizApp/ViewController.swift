@@ -21,10 +21,16 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     var questions = [Question]()
     var currentQuestionIndex = 0
     var numCorrect = 0
+    var resultDialog:ResultViewController?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Initialize the result dialog
+        resultDialog = storyboard?.instantiateViewController(identifier: "ResultVC") as? ResultViewController
+        resultDialog?.modalPresentationStyle = .overCurrentContext
+        
         
         //Set self as the delegate and tablesource for the table view
         tableView.delegate = self
@@ -117,7 +123,14 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             
             //User got it wrong
             print("User got it wrong")
+        
         }
+        
+        //Show the popup
+        if resultDialog != nil {
+            present(resultDialog!, animated: true, completion: nil)
+        }
+        
         
         //Increment currentQuestionIndex
         currentQuestionIndex += 1
