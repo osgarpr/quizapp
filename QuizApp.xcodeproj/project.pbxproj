@@ -17,6 +17,7 @@
 		2D3C8D3824FBD5FB0013F427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C8D3624FBD5FB0013F427 /* LaunchScreen.storyboard */; };
 		2D3C8D4024FBDC490013F427 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D3F24FBDC490013F427 /* Question.swift */; };
 		2D3C8D4224FBDD220013F427 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C8D4124FBDD220013F427 /* QuizModel.swift */; };
+		2DAE4B832519FF36007B34EC /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE4B822519FF36007B34EC /* StateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2D3C8D3924FBD5FB0013F427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D3C8D3F24FBDC490013F427 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		2D3C8D4124FBDD220013F427 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		2DAE4B822519FF36007B34EC /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				2D3C8D2D24FBD5F10013F427 /* SceneDelegate.swift */,
 				2D3C8D2F24FBD5F10013F427 /* ViewController.swift */,
 				2D06E6DA250F7F7300BA1243 /* ResultViewController.swift */,
+				2DAE4B822519FF36007B34EC /* StateManager.swift */,
 				2D3C8D3124FBD5F10013F427 /* Main.storyboard */,
 				2D3C8D3424FBD5FB0013F427 /* Assets.xcassets */,
 				2D3C8D3624FBD5FB0013F427 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				2D3C8D3024FBD5F10013F427 /* ViewController.swift in Sources */,
 				2D3C8D4024FBDC490013F427 /* Question.swift in Sources */,
 				2D3C8D2C24FBD5F10013F427 /* AppDelegate.swift in Sources */,
+				2DAE4B832519FF36007B34EC /* StateManager.swift in Sources */,
 				2D3C8D2E24FBD5F10013F427 /* SceneDelegate.swift in Sources */,
 				2D3C8D4224FBDD220013F427 /* QuizModel.swift in Sources */,
 				2D06E6DB250F7F7300BA1243 /* ResultViewController.swift in Sources */,

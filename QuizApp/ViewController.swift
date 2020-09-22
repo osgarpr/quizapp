@@ -62,6 +62,23 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         //Get a reference to the questions
         self.questions = questions
         
+        //Check if we should restore the state before display question #1
+        let saveIndex = StateManager.retreiveValue(key: StateManager.questionIndexKey) as? Int
+        
+        if saveIndex != nil && saveIndex! < self.questions.count {
+            
+            //Set the current question to the saveIndex
+            currentQuestionIndex = saveIndex!
+            
+            //Retreive the number of correct from storage
+            let saveNumCorrect = StateManager.retreiveValue(key: StateManager.numCorrectKey) as? Int
+            
+            if saveNumCorrect != nil {
+                numCorrect = saveNumCorrect!
+            }
+            
+        }
+        
         //Display the first question
         displayQuestion()
     }
@@ -168,6 +185,9 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
                 
                 present(resultDialog!, animated: true, completion: nil)
                 
+                //Clear the state
+                StateManager.clearState()
+                
             }
         }
         else if currentQuestionIndex > questions.count{
@@ -183,6 +203,10 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
                 
             //Display the next question
             displayQuestion()
+            
+            //Save state
+            StateManager.safeState(numCorrect: numCorrect, questionIndex: currentQuestionIndex)
+            
             }
         }
     }
