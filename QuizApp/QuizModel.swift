@@ -18,7 +18,7 @@ class QuizModel {
     func getQuestions() {
         
         //Fetch the question
-        getLocalJasonFile()
+        getRemoteJasonFile()
         
     }
     
@@ -55,6 +55,51 @@ class QuizModel {
     }
     
     func getRemoteJasonFile(){
+        
+        //Get a URL Object
+        let urlString = "https://codewithchris.com/code/QuestionData.json"
+        
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            print("Couldn't create the URL object")
+            return
+            
+        }
+        
+        //Get a URL Session Object
+        let session = URLSession.shared
+        
+        //Get a data Task Object
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            
+            //Check that there wasnt an error
+            if error == nil && data != nil {
+                
+                do {
+                    //Create a Json decoder object
+                    let decoder = JSONDecoder()
+                                   
+                    // Parse Json
+                    let array = try decoder.decode([Question].self, from: data!)
+                    
+                    //Use the main thread to notify the view controller for UI Work
+                    DispatchQueue.main.async {
+                        //Notify view controller (delegate)
+                        self.delegate?.questionRetreive(array)
+                    }
+                }
+                
+                catch {
+                    print("Could't parse JSON")
+                }
+            }
+        }
+        
+        //Call resume on the data task
+        dataTask.resume()
+        
+        
         
     }
     
