@@ -45,16 +45,38 @@ class ResultViewController: UIViewController {
         tittleLabel.text = titleText
         feedbackLabel.text = feedbackText
         dismissButton.setTitle(buttonText, for: .normal)
+        
+        //Hide the UIElements
+        dimView.alpha = 0
+        tittleLabel.alpha = 0
+        feedbackLabel.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //Fade in the elements
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: {
+            self.dimView.alpha = 1
+            self.tittleLabel.alpha = 1
+            self.feedbackLabel.alpha = 1
+        }, completion: nil)
     }
     
     
     @IBAction func dismissTapped(_ sender: Any) {
         
-        //Dismiss the Popup
-        dismiss(animated: true, completion: nil)
-        
-        //Notify delegate Popup was dismissed
-        delegate?.dialogDismissed()
+        //Fade out the dim view
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.dimView.alpha = 0
+
+            
+        }) { (completed) in
+            //Dismiss the Popup
+            self.dismiss(animated: true, completion: nil)
+            
+            //Notify delegate Popup was dismissed
+            self.delegate?.dialogDismissed()
+        }
         
     }
     
